@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyrealm - Experience the Ultimate Gaming Adventure</title>
+    <meta name="description" content="Dive into the extraordinary world of Joyrealm, where adventure and excitement await at every turn.">
+    <link rel="canonical" href="https://joyrealm.org/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        :root {
+            --jojo-purple: #9b59b6;
+            --jojo-gold: #f1c40f;
+            --jojo-pink: #e84393;
+            --jojo-blue: #3498db;
+            --jojo-green: #2ecc71;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #121212 0%, #2c3e50 100%);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .jojo-container {
+            background: rgba(0, 0, 0, 0.7);
+            border: 3px solid var(--jojo-gold);
+            box-shadow: 0 0 20px var(--jojo-purple);
+        }
+        
+        .jojo-title {
+            background: linear-gradient(90deg, var(--jojo-purple), var(--jojo-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+            font-weight: 800;
+            letter-spacing: 2px;
+            transform: skew(-5deg);
+        }
+        
+        .jojo-subtitle {
+            color: var(--jojo-gold);
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transform: skew(-2deg);
+            border-bottom: 2px solid var(--jojo-pink);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .game-frame {
+            border: 5px solid var(--jojo-gold);
+            box-shadow: 0 0 30px var(--jojo-purple);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 16/9;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .game-frame iframe {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.2) 0%, rgba(155, 89, 182, 0.2) 100%);
+            border-left: 4px solid var(--jojo-pink);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(155, 89, 182, 0.3);
+            border-left: 4px solid var(--jojo-gold);
+        }
+        
+        .btn-play {
+            background: linear-gradient(90deg, var(--jojo-purple), var(--jojo-pink));
+            color: white;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(155, 89, 182, 0.5);
+        }
+        
+        .btn-play:hover {
+            transform: scale(1.05);
+            box-shadow: 0 7px 20px rgba(155, 89, 182, 0.7);
+        }
+        
+        .star-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+        }
+        
+        @media (max-width: 768px) {
+            .game-frame {
+                aspect-ratio: 4/3;
+            }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen">
+    <div class="star-bg"></div>
+    
+    <header class="py-6 px-4 md:px-8 lg:px-16">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl font-bold text-white">
+                <span class="text-yellow-400">Joy</span><span class="text-purple-400">Realm</span>
+            </div>
+            <nav>
+                <button class="btn-play">Play Now</button>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
+        <section class="text-center mb-16">
+            <h1 class="jojo-title text-4xl md:text-5xl lg:text-6xl mb-4">WELCOME TO JOYREALM</h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">Embark on an extraordinary journey where reality bends to your imagination!</p>
+        </section>
+        
+        <section class="mb-16">
+            <div class="game-frame">
+                <iframe allowfullscreen="true" scrolling="no" id="game_drop" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" src="https://html-classic.itch.zone/html/11407110/index.html?v=1730332583" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share" frameborder="0"></iframe>
+            </div>
+        </section>
+        
+        <section class="jojo-container p-8 rounded-lg mb-16">
+            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-6">ABOUT THE GAME</h2>
+            <p class="text-lg mb-6">
+                Joyrealm is an immersive gaming experience that transports players to a vibrant universe filled with challenges, adventures, and endless possibilities. Designed with cutting-edge technology and inspired by classic gaming elements, Joyrealm offers a unique blend of nostalgia and innovation.
+            </p>
+            <p class="text-lg">
+                Whether you're a casual gamer looking for a quick escape or a dedicated player seeking depth and complexity, Joyrealm delivers an experience tailored to your preferences. With intuitive controls, stunning visuals, and an engaging storyline, this game promises hours of entertainment for players of all ages and skill levels.
+            </p>
+        </section>
+        
+        <section class="mb-16">
+            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-8">GAME FEATURES</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="feature-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Immersive Gameplay</h3>
+                    <p>Experience a world that responds to your choices and actions, creating a truly personalized adventure.</p>
+                </div>
+                <div class="feature-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Stunning Visuals</h3>
+                    <p>Feast your eyes on breathtaking landscapes and meticulously designed characters that bring the world to life.</p>
+                </div>
+                <div class="feature-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Epic Soundtrack</h3>
+                    <p>Immerse yourself in a dynamic audio experience that adapts to your gameplay and enhances every moment.</p>
+                </div>
+                <div class="feature-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Challenging Puzzles</h3>
+                    <p>Test your wit and problem-solving skills with a variety of puzzles that increase in complexity as you progress.</p>
+                </div>
+                <div class="feature-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Character Customization</h3>
+                    <p>Create and evolve your unique character with countless customization options and ability upgrades.</p>
+                </div>
+                <div class="feature-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Multiplayer Options</h3>
+                    <p>Connect with friends and compete or collaborate in various game modes designed for social interaction.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="jojo-container p-8 rounded-lg mb-16">
+            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-6">HOW TO PLAY</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-xl font-bold mb-2 text-yellow-400">Getting Started</h3>
+                    <p>Simply click the "Play Now" button or use the game frame above to begin your adventure. No downloads or installations required!</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-2 text-yellow-400">Controls</h3>
+                    <p>Use WASD or arrow keys for movement, mouse for camera control, and space bar to jump. Additional controls will be introduced as you progress through the tutorial.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-2 text-yellow-400">Objectives</h3>
+                    <p>Complete missions, collect resources, and defeat enemies to advance through the game. Each level presents new challenges and rewards.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="text-center mb-16">
+            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-6">JOIN THE ADVENTURE</h2>
+            <p class="text-lg mb-8 max-w-3xl mx-auto">Ready to embark on an unforgettable journey? Dive into Joyrealm now and discover a world where imagination knows no bounds!</p>
+            <button class="btn-play text-lg">Play Joyrealm Now</button>
+        </section>
+    </main>
+    
+    <footer class="bg-black bg-opacity-50 py-8 px-4 md:px-8 lg:px-16">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-white mb-2">
+                        <span class="text-yellow-400">Joy</span><span class="text-purple-400">Realm</span>
+                    </div>
+                    <p class="text-gray-400">© 2023 Joyrealm. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
